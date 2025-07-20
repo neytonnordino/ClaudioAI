@@ -11,10 +11,7 @@ type clientLayoutProps = {
   className?: string;
 };
 
-export default function ClientLayout({
-  children,
-  className,
-}: clientLayoutProps) {
+export default function ClientLayout({ children }: clientLayoutProps) {
   const [isSideBarOpen, setIsSidebarOpen] = useState(true);
   const { userName, setUserName, isHydrated } = useUser();
 

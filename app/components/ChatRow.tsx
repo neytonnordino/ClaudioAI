@@ -6,9 +6,9 @@ import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
-import { BiSolidTrash, BiSolidTrashAlt } from "react-icons/bi";
+import { BiSolidTrashAlt } from "react-icons/bi";
 import { IoChatboxOutline } from "react-icons/io5";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 type ChatRowProps = {
   id: string;

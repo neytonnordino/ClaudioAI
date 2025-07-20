@@ -5,7 +5,6 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import toast from "react-hot-toast";
 import { FaRegUser } from "react-icons/fa";
 import { TbPaperclip } from "react-icons/tb";
 import LoadingDot from "./LoadingDot";

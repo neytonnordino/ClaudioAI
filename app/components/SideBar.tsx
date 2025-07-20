@@ -31,7 +31,7 @@ const SideBar = ({ isOpen, toggleSideBar }: SideBarProps) => {
     if (!chats) {
       router?.push("/");
     }
-  }, [chats]);
+  }, [chats, router]);
   return (
     <aside
       className={`fixed top-0 left-0 z-50 lg:relative text-gray-200 scrollbar overflow-y-scroll overflow-hidden h-screen bg-neutral-900 transition-all duration-300
