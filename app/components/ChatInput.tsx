@@ -35,7 +35,7 @@ const ChatInput = ({ chatId }: ChatInputProps) => {
         _chatId: userEmail,
         name: userName,
         avatar: session?.user ? (
-          (session.user.image as string)
+          (session.user.image as string) //escreve a imagem do user
         ) : (
           <FaRegUser className="text-24" />
         ),
