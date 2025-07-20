@@ -9,7 +9,6 @@ import { useCollection } from "react-firebase-hooks/firestore";
 import { collection, orderBy, query } from "firebase/firestore";
 import { db } from "@/firebase";
 import { useRouter } from "next/navigation";
-import LoadingDot from "./LoadingDot";
 import ChatRow from "./ChatRow";
 
 type SideBarProps = {
