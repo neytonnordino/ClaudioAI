@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 14px;
+    height: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: theme("colors.neutral.900");
+    padding: 20px;
+    border-radius: 10px; /* bg-neutral-800 */
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: theme("colors.neutral.600"); /* bg-neutral-600 */
+    border-radius: 9999px;
+
+    border: 2px solid theme("colors.neutral.800");
+  }
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #424242;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
