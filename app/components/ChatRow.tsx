@@ -1,3 +1,5 @@
+"use client"
+
 import { db } from "@/firebase";
 import { collection, deleteDoc, doc, orderBy, query } from "firebase/firestore";
 import { useSession } from "next-auth/react";
