@@ -29,7 +29,7 @@ export default function ChatMessage({ id }: { id: string }) {
   }, [messages]);
 
   return (
-    <div className="pt-24 md:pt-40 max-w-full md:max-w-3xl mx-auto h-[calc(100vh-120px)] md:h-screen overflow-y-auto overflow-x-hidden px-2 sm:px-4 scrollbar1">
+    <div className="pt-24 md:pt-52 max-w-full md:max-w-3xl mx-auto h-[calc(100vh-120px)] md:h-screen overflow-y-auto overflow-x-hidden px-2 sm:px-4 scrollbar1">
       {loading ? (
         // Skeleton loader while fetching data
         <div className="space-y-4">
