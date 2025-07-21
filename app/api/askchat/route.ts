@@ -27,7 +27,7 @@ export const POST = async (req: NextRequest) => {
     const response = await query(prompt, id, model);
     const message = {
       text: response || "Claudio was unable to find an answer for that",
-      createdAt: admin.firestore.Timestamp.now(),
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
       user: {
         _id: "Claudio",
         name: "Claudio",

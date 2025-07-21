@@ -5,17 +5,16 @@ import ReactMarkdown from "react-markdown";
 
 const Message = ({ message }: { message: DocumentData }) => {
   const isClaudio = message?.user?.name === "Claudio";
-  console.log(message.text)
 
   return (
-    <section className="py-5 text-white">
+    <section className="py-3 sm:py-5 text-white">
       <div
-        className={`flex items-start gap-2.5 md:gap-5 md:px-10 ${
+        className={`flex items-start gap-2 sm:gap-4 md:gap-5 px-1 sm:px-4 w-full ${
           isClaudio ? "justify-start" : "justify-end"
         }`}
       >
         {isClaudio && (
-          <div className="border border-gray-600 w-9 h-9 rounded-full">
+          <div className="border border-gray-600 w-8 h-8 sm:w-9 sm:h-9 rounded-full hidden md:inline-flex">
             <Image
               src={message?.user.avatar}
               alt="userImage"
@@ -27,13 +26,13 @@ const Message = ({ message }: { message: DocumentData }) => {
         )}
 
         <div
-          className={`flex flex-col max-w-xl ${
-            isClaudio ? "items-start" : "items-end"
+          className={`flex flex-col max-w-[85vw] sm:max-w-xl ${
+            isClaudio ? "items-end" : "items-start"
           }`}
         >
           <div
-            className={`prose prose-invert px-4 py-2 rounded-lg shadow-sm text-base tracking-wider whitespace-pre-wrap ${
-              isClaudio ? "bg-transparent" : "bg-[#2F2F2F] max-w-lg"
+            className={`prose prose-invert px-3 py-2 rounded-lg shadow-sm text-sm sm:text-base tracking-normal md:tracking-wider whitespace-pre-wrap break-words max-w-full ${
+              isClaudio ? "bg-transparent" : "bg-[#2F2F2F]"
             }`}
           >
             <ReactMarkdown>{message?.text}</ReactMarkdown>
@@ -41,7 +40,7 @@ const Message = ({ message }: { message: DocumentData }) => {
         </div>
 
         {!isClaudio && (
-          <div className="border border-gray-600 w-9 h-9 rounded-full">
+          <div className="border border-gray-600 w-8 h-8 sm:w-9 sm:h-9 rounded-full shrink-0 hidden md:inline-flex">
             <Image
               src={message?.user.avatar}
               alt="userImage"

@@ -29,7 +29,7 @@ export default function ChatMessage({ id }: { id: string }) {
   }, [messages]);
 
   return (
-    <div className="pt-52 max-w-3xl mx-auto h-screen overflow-y-scroll">
+    <div className="pt-24 md:pt-40 max-w-full md:max-w-3xl mx-auto h-[calc(100vh-120px)] md:h-screen overflow-y-auto overflow-x-hidden px-2 sm:px-4 scrollbar1">
       {loading ? (
         // Skeleton loader while fetching data
         <div className="space-y-4">
@@ -38,12 +38,12 @@ export default function ChatMessage({ id }: { id: string }) {
           ))}
         </div>
       ) : messages?.empty ? (
-        <div className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-6">
+        <div className="flex flex-col items-center justify-center min-h-[60vh] px-0 pt-10">
           {/* Main empty state container */}
           <div className="text-center space-y-6 max-w-md">
             {/* Icon */}
             <div className="relative">
-              <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-white/10">
+              <div className="w-10 h-10 md:w-20 md:h-20 mx-auto bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-white/10">
                 <svg
                   className="w-10 h-10 text-gray-400"
                   fill="none"
@@ -65,7 +65,7 @@ export default function ChatMessage({ id }: { id: string }) {
               <h2 className="text-2xl font-semibold text-white">
                 Bem-vindo ao Claudio
               </h2>
-              <p className="text-neutral-400 text-sm leading-relaxed">
+              <p className="text-neutral-400 text-sm leading-relaxed hidden md:block">
                 Seu assistente de IA pessoal. Estou aqui para ajudar com
                 qualquer pergunta, tarefa ou conversa.
               </p>
@@ -84,7 +84,7 @@ export default function ChatMessage({ id }: { id: string }) {
                 ].map((suggestion, index) => (
                   <div
                     key={index}
-                    className="group p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg cursor-pointer transition-all duration-200"
+                    className="group py-2 px-3 md:p-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-lg cursor-pointer transition-all duration-200"
                   >
                     <p className="text-sm text-neutral-300 group-hover:text-white transition-colors">
                       {suggestion}

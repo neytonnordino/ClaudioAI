@@ -19,7 +19,7 @@ const ChatPage = async (props: Props) => {
             <ChatMessage id={chatId} />
           </div>
           <ChatInput chatId={chatId} />
-          <p className="text-center py-2">
+          <p className="text-center py-2 text-[12px] md:text-base">
             Claudio pode cometer erros. Considere verificar informações
             importantes.
           </p>

@@ -18,20 +18,38 @@
 
     border: 2px solid theme("colors.neutral.800");
   }
+
+  .scrollbar1::-webkit-scrollbar {
+  width: 3px;
+  height: 2px;
 }
 
-::-webkit-scrollbar {
-  width: 14px;
-}
-
-::-webkit-scrollbar-track {
+.scrollbar1::-webkit-scrollbar-track {
   background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
+.scrollbar1::-webkit-scrollbar-thumb {
   background: #424242;
+  border-radius: 9999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.scrollbar1::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+}
+
+@media (min-width: 768px) {
+  .scrollbar1::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+}
+
+@media (max-width: 480px) {
+  .scrollbar1::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+}
+
+

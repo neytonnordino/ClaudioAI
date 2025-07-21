@@ -1,7 +1,13 @@
 "use client";
 
 import { db } from "@/firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  serverTimestamp,
+  getDoc,
+  doc as firestoreDoc,
+} from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -57,7 +63,8 @@ const ChatInput = ({ chatId }: ChatInputProps) => {
         router.push(`/chat/${chatDocument}`);
       }
 
-      await addDoc(
+      // Write the user's message and wait for it to be committed
+      const userMessageRef = await addDoc(
         collection(
           db,
           "users",
@@ -68,8 +75,19 @@ const ChatInput = ({ chatId }: ChatInputProps) => {
         ),
         message
       );
+
+      // Wait for Firestore to resolve the serverTimestamp
+      let userMessageData = null;
+      for (let i = 0; i < 10; i++) {
+        // Try up to 10 times
+        const userMessageSnap = await getDoc(userMessageRef);
+        userMessageData = userMessageSnap.data();
+        if (userMessageData && userMessageData.createdAt) break;
+        await new Promise((res) => setTimeout(res, 100)); // Wait 100ms
+      }
       setPrompt("");
 
+      // Now call the API
       await fetch("/api/askchat", {
         method: "POST",
         headers: {
