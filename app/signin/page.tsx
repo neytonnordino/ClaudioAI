@@ -15,7 +15,7 @@ const SignInPage = async () => {
     redirect("/");
   }
   return (
-    <div className="fixed w-full h-full left-0 bg-black/90 text-white flex items-center justify-center">
+    <div className="fixed w-full h-full left-0 bg-black/90 text-white flex items-center justify-center z-50">
       <div className="bg-neutral-800 shadow-gray-200 w-72 h-auto md:w-96 md:h-auto flex flex-col borde justify-center items-center rounded-lg">
         <div className="px-10 py-6 text-center">
           <p className="text-2xl md:text-3xl text-center font-bold tracking-wide">
