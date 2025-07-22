@@ -73,7 +73,7 @@ const ChatRow = ({ id }: ChatRowProps) => {
   return (
     <Link
       href={`/chat/${id}`}
-      className={`flex gap-2 items-center justify-center px-2 py-1.5  bg-transparent mb-2 hover:bg-white/10 rounded-md duration-300 ease-in group${
+      className={`flex gap-2 items-center justify-center px-2 py-1.5  bg-transparent mb-2 hover:bg-white/10 rounded-md duration-300 ease-in group ${
         active ? "bg-white/10" : "bg-transparent"
       }`}
     >
