@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <UserProvider>
         <Providers>
-          <body className="h-screen">
+          <body className="h-dvh">
             <ClientLayout>{children}</ClientLayout>
             <Toaster
               position="top-right"
