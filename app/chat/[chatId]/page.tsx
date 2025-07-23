@@ -14,7 +14,7 @@ const ChatPage = async (props: Props) => {
   return (
     <>
       <main>
-        <div className="flex flex-col justify-center h-screen overflow-hidden p-5 absolute top-0 left-0 right-0">
+        <div className="flex flex-col justify-center h-dvh overflow-hidden p-5 absolute top-0 left-0 right-0">
           <div className="flex-1 pt-10">
             <ChatMessage id={chatId} />
           </div>

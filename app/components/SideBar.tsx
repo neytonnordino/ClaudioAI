@@ -34,7 +34,7 @@ const SideBar = ({ isOpen, toggleSideBar }: SideBarProps) => {
   }, [chats, router]);
   return (
     <aside
-      className={`fixed top-0 left-0 z-50 lg:relative text-gray-200 scrollbar overflow-y-scroll overflow-hidden h-screen bg-neutral-900 transition-all duration-300
+      className={`fixed top-0 left-0 z-50 lg:relative text-gray-200 scrollbar overflow-y-scroll overflow-hidden h-dvh bg-neutral-900 transition-all duration-300
       ${isOpen ? "w-64 md:w-72 px-3" : "w-0 px-0 overflow-hidden"} 
       md:block tracking-wider `}
     >

@@ -33,7 +33,7 @@ export default function ClientLayout({ children }: clientLayoutProps) {
 
   if (!isHydrated) {
     return (
-      <div className="w-full h-screen flex items-center justify-center bg-[#212121]">
+      <div className="w-full h-dvh flex items-center justify-center bg-[#212121]">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
       </div>
     );
@@ -41,7 +41,7 @@ export default function ClientLayout({ children }: clientLayoutProps) {
 
   if (!userName) {
     return (
-      <div className="w-full h-screen flex items-end md:items-center justify-center bg-[#212121]">
+      <div className="w-full h-dvh flex items-end md:items-center justify-center bg-[#212121]">
         <form
           action={handleSubmit}
           className="bg-[#292929] p-6 rounded-4xl shadow-md w-full md:min-w-2xl md:w-auto m-2 md:m-0 mb-4"
@@ -83,7 +83,7 @@ export default function ClientLayout({ children }: clientLayoutProps) {
   }
 
   return (
-    <div className="flex h-screen w-full bg-[#212121] text-white">
+    <div className="flex h-dvh w-full bg-[#212121] text-white">
       <div>
         <SideBar
           isOpen={isSideBarOpen}
@@ -107,7 +107,7 @@ export default function ClientLayout({ children }: clientLayoutProps) {
         </button>
       </div>
 
-      <div className="h-screen flex-1 relative">
+      <div className="h-dvh flex-1 relative">
         <Header
           isOpen={isSideBarOpen}
           toggleSideBar={() => setIsSidebarOpen((prev) => !prev)}
