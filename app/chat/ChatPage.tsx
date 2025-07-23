@@ -17,7 +17,7 @@ function ChatPage() {
           </h1>
 
           <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 px-2">
               <ChatInput chatId="" />
               <ChatHelp />
             </div>
