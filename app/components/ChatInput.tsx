@@ -10,7 +10,6 @@ import {
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { FaRegUser } from "react-icons/fa";
 import { TbPaperclip } from "react-icons/tb";
 import LoadingDot from "./LoadingDot";
 
