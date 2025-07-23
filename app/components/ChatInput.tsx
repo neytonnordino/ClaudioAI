@@ -39,11 +39,9 @@ const ChatInput = ({ chatId }: ChatInputProps) => {
       user: {
         _chatId: userEmail,
         name: userName,
-        avatar: session?.user ? (
-          (session.user.image as string) //escreve a imagem do user
-        ) : (
-          <FaRegUser className="text-24" />
-        ),
+        avatar: session?.user
+          ? (session.user.image as string) //escreve a imagem do user
+          : "https://img.icons8.com/fluency-systems-regular/48/user.png",
       },
     };
 

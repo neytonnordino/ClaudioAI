@@ -25,6 +25,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   const handleSetUserName = (name: string) => {
     setUserName(name);
     localStorage.setItem("userName", name);
+
   };
 
   return (
