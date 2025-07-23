@@ -117,7 +117,7 @@ const ChatRow = ({ id }: ChatRowProps) => {
       </div>
       <BiSolidTrashAlt
         onClick={handleRemoveChat}
-        className="text-white/50 hover:text-red-500 duration-300 ease-inout hidden group-hover:inline-flex"
+        className="text-white/50 hover:text-red-500 duration-300 ease-inout md:hidden group-hover:inline-flex"
       />
     </Link>
   );
