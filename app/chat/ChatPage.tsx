@@ -16,7 +16,7 @@ function ChatPage() {
             Olá {userName}, o que posso fazer por ti hoje?
           </h1>
 
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 pb-2">
             <div className="flex flex-col gap-6 px-2">
               <ChatInput chatId="" />
               <ChatHelp />

@@ -57,7 +57,7 @@ function Header({ isOpen, toggleSideBar }: SideBarProps) {
           onClick={() => setIsShown((prev) => !prev)}
         >
           <div className="flex items-center gap-2">
-            <h2 className="text-xl md:text-2xl text-white  transition-all ">
+            <h2 className="text-xl md:text-2xl text-white transition-all ">
               Cláudio
             </h2>
             <svg
