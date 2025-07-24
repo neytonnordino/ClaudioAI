@@ -20,36 +20,39 @@
   }
 
   .scrollbar1::-webkit-scrollbar {
-  width: 3px;
-  height: 2px;
-}
+    width: 3px;
+    height: 2px;
+  }
 
-.scrollbar1::-webkit-scrollbar-track {
-  background: transparent;
-}
+  .scrollbar1::-webkit-scrollbar:hover {
+    width: 8px;
+    height: 8px;
+  }
 
-.scrollbar1::-webkit-scrollbar-thumb {
-  background: #424242;
-  border-radius: 9999px;
-}
+  .scrollbar1::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-.scrollbar1::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+  .scrollbar1::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 9999px;
+  }
+
+  .scrollbar1::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 }
 
 @media (min-width: 768px) {
   .scrollbar1::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
+    width: 8px;
+    height: 8px;
+  }
 }
 
 @media (max-width: 480px) {
   .scrollbar1::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+    width: 3px;
+    height: 3px;
+  }
 }
-}
-
-
