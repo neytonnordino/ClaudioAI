@@ -47,7 +47,7 @@ const SideBar = ({ isOpen, toggleSideBar }: SideBarProps) => {
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 50 50"
-              width="30px"
+              width="25px"
               height="30px"
               className="hover:bg-neutral-700 transition rounded-xl"
             >

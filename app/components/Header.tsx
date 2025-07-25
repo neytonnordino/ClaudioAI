@@ -117,8 +117,8 @@ function Header({ isOpen, toggleSideBar }: SideBarProps) {
           <div className="flex gap-2 items-center cursor-pointer hover:bg-white/10  p-2 rounded-md transition">
             {/* upload icon */}
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +151,7 @@ function Header({ isOpen, toggleSideBar }: SideBarProps) {
             {/* three dots icon */}
             <div className="p-2 cursor-pointer hover:bg-white/10 rounded-md transition">
               <svg
-                width="24"
+                width="20"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -170,8 +170,8 @@ function Header({ isOpen, toggleSideBar }: SideBarProps) {
                       <Image
                         src={session.user.image}
                         alt="Avatar icon"
-                        width={40}
-                        height={40}
+                        width={30}
+                        height={30}
                         className="rounded-full"
                       />
                     ) : (
